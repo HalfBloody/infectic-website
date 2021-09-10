@@ -4,16 +4,23 @@
        bg-gray-dark flex justify-left px-3 pt-3 pb-2
        md:justify-between md:items-center
     `)
-      img(:src="require('@/public/images/Logo-light.png')").items-center
+      img(:src="require('@/public/images/Logo-light.png')" class=`
+        items-center
+        w-1/4 md:w-28
+        my-2
+      `)
       div(class=`
         md:block
-      `).hidden.flex.items-center
+         hidden flex items-center
+      `)
         a(href="mailto:hello@infectic.com" target="_blank")
           div(class=`
             rounded-lg py-2 px-6 text-red-lightest bg-gradient-to-r from-red to-gray
             hover:border-2
           `) Let's Talk
-    div(class=``).bg-gradient-to-r.from-red-lightest.to-gray.h-1
+    div(class=`
+       bg-gradient-to-r from-red-lightest to-gray h-1
+    `)
     div(class=`
        relative bg-gray-darkest
        before:bg-gradient-to-t before:from-gray-dark
@@ -45,7 +52,8 @@
       md:hidden
     `)
       div(class=`
-      `).flex.items-center.p-3
+         flex items-center p-3
+      `)
         a(href="mailto:hello@infectic.com" target="_blank" class=`
           m-auto
           my-3
