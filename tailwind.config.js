@@ -1,11 +1,16 @@
 module.exports = {
-  purge: [],
+  mode: 'jit',
+  purge: [
+    './pages/**/*.vue',
+    './components/**/*.vue',
+  ],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       colors: {
         gray: {
-          darkest: "#2A2C2B",
+          darkest: "#252827",
+          darker: "#2A2C2B",
           dark: "#3E4140",
           DEFAULT: "#707573",
           light: "#B2B2B2",
@@ -15,6 +20,9 @@ module.exports = {
           DEFAULT: "#CD2D0F",
           light: "#EDA492",
           lightest: "#FCF0ED"
+        },
+        black: {
+          DEFAULT: "#2A2C2B",
         }
       }
     },
