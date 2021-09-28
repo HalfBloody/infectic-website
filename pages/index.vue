@@ -8,7 +8,7 @@
          bg-gray-dark flex justify-left px-3 pt-3 pb-2
          md:justify-between md:items-center
       `)
-        img(:src="require('@/public/images/Logo-light.png')" class=`
+        img(:src="require('@/public/images/logo-infectic-transparent.png')" class=`
           items-center
           w-1/4 md:w-28
           my-2
@@ -31,7 +31,7 @@
          before:left-0 before:top-0 before:right-0 before:bottom-0
          md:before:hidden before:absolute
       `)
-        img(:src="require('@/public/images/face-bg.png')" class=`
+        img(:src="require('@/public/images/face-bg.webp')" class=`
           bg-gradient-to-t from-gray
           w-full
           md:ml-auto md:mr-0
@@ -70,32 +70,22 @@
               text-xl
             `) Let's Talk
       div.bg-gradient-to-r.from-red-lightest.to-gray.h-1
-      div.bg-gray-dark.py-6
+      div.bg-gray-darkest.py-6
         div(class=`
           flex
           flex-col md:flex-row mx-1
          `)
-            SkillCard(v-for="skill in skills" :title="skill.title" :text="skill.text" :key="skill.title")
-  //- div
-  //-   div.bg-gray-dark.flex.justify-between.px-6.pt-3.pb-2
-  //-     img(:src="require('@/public/images/Logo-light.png')").items-center
-  //-     div.flex.items-center
-  //-       a(href="mailto:hello@infectic.com" target="_blank")
-  //-         div(class=`
-  //-           rounded-lg py-2 px-6 text-red-lightest bg-gradient-to-r from-red to-gray
-  //-           hover:border-2
-  //-         `) CONTACT
-  //-   div(class=`
-  //-   `).bg-gradient-to-r.from-red-lightest.to-gray.h-1
-  //-   div
-  //-     img(:src="require('@/public/images/shouting-background.png')")
-  //-     span.absolute.bottom-96.left-9.text.text-red.text-md-8xl.text-xl Contagiously
-  //-     span.absolute.bottom-72.left-9.text.text-red-lightest.text-md-8xl.text-xl Effective.
-  //-   div.bg-gradient-to-r.from-red-lightest.to-gray.h-1
-  //-   div.bg-gray-darkest.h-4.pb-10
-  //-   div.bg-gray-lightest.h-96
-  //-     .flex.justify-between
-  //-       SkillCard(v-for="skill in skills" :title="skill.title" :text="skill.text" :key="skill.title")
+            SkillCard(v-for="skill in skills" :title="skill.title" :text="skill.text" :iconComponent="skill.iconComponent" :key="skill.title")
+    .w-full.bg-black.text-white
+      .max-w-8xl.m-auto.p-8
+        img(:src="require('@/public/images/logo-infectic-transparent.png')" class=`
+          items-center
+          w-1/4 md:w-28
+          my-2
+        `).my-3
+        .flex.justify-between.items-baseline
+          p.my-10 Copyright 2021 Infectic Ltd, all rights reserved.
+          //- nuxt-link(to="/imprint").underline Imprint
 </template>
 
 <script>
@@ -108,10 +98,12 @@ export default {
         {
           title: "Digital Marketing",
           text: "We're well versed in scaling web and mobile projects. We have deep experience with Google Ads and have scaled products based on Influencer Marketing and SEO.",
+          iconComponent: "MarketingIcon",
         },
         {
           title: "Development",
           text: "With Extensive Experience in Web and Mobile Development we're well prepared to tackle complex web-based IT projects. We know how to build a proper architecture and to scale the infrastructure behind.",
+          iconComponent: "DevIcon",
         },
       ]
     }

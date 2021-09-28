@@ -35,6 +35,10 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
   ],
+  server: {
+    host: '0.0.0.0',
+    port: 3003,
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [

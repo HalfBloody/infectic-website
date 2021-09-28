@@ -14,7 +14,9 @@
     filter
     drop-shadow
   `)
-    .text-xl.font-bold.text-gray-darkest.mb-6 {{ title }}
+    .flex.items-center.mb-6
+      component(:is="iconComponent").mr-10
+      .text-4xl.font-regular.text-gray-darkest {{ title }}
     div
       .bg-gradient-to-r.to-red-lightest.from-gray.h-1.mb-5
     div.text-gray {{ text }}
@@ -23,7 +25,7 @@
 <script>
 
 export default {
-  props: ['title', 'text'],
+  props: ['title', 'text', 'iconComponent'],
   data () {
     return {
 
