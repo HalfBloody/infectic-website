@@ -8,7 +8,7 @@
          bg-gray-dark flex justify-left px-3 pt-3 pb-2
          md:justify-between md:items-center
       `)
-        img(:src="require('@/public/images/logo-infectic-transparent.png')" class=`
+        img(:src="require('~/assets/images/logo-infectic-transparent.png')" class=`
           items-center
           w-1/4 md:w-28
           my-2
@@ -31,7 +31,7 @@
          before:left-0 before:top-0 before:right-0 before:bottom-0
          md:before:hidden before:absolute
       `)
-        img(:src="require('@/public/images/face-bg.webp')" class=`
+        img(:src="require('~/assets/images/face-bg.webp')" class=`
           bg-gradient-to-t from-gray
           w-full
           md:ml-auto md:mr-0
@@ -78,7 +78,7 @@
             SkillCard(v-for="skill in skills" :title="skill.title" :text="skill.text" :iconComponent="skill.iconComponent" :key="skill.title")
     .w-full.bg-black.text-white
       .max-w-8xl.m-auto.p-8
-        img(:src="require('@/public/images/logo-infectic-transparent.png')" class=`
+        img(:src="require('~/assets/images/logo-infectic-transparent.png')" class=`
           items-center
           w-1/4 md:w-28
           my-2
